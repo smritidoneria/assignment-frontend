@@ -11,7 +11,7 @@ const Movies = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/admin/getmovies');
+        const response = await axios.get('https://assignment-hazel-nine-38.vercel.app/api/admin/getmovies');
         setMovies(response.data);
       } catch (error) {
         console.error('Error fetching movies:', error);
@@ -28,7 +28,7 @@ const Movies = () => {
     }));
 
     try {
-      const response = await axios.post(`http://localhost:3000/api/rating/movies/${movieId}/${userId}/rate`, {
+      const response = await axios.post(`https://assignment-hazel-nine-38.vercel.app/api/rating/movies/${movieId}/${userId}/rate`, {
         userId,
         movieId,
         rating

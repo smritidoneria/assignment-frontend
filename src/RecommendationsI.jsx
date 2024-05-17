@@ -10,7 +10,7 @@ const RecommendationsI = () => {
   useEffect(() => {
     const fetchRecommendations = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/rating/recommendationsI/${userId}`);
+        const response = await axios.get(`https://assignment-hazel-nine-38.vercel.app/api/rating/recommendationsI/${userId}`);
         console.log("|||",response.data);
         setMovies(response.data.recommendations);
       } catch (error) {

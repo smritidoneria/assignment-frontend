@@ -17,7 +17,7 @@ const UserRegistration = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:3000/api/user/register', data);
+      const response = await axios.post('https://assignment-hazel-nine-38.vercel.app/api/user/register', data);
       const result = response.data;
       console.log(result);
       console.log(result.user.users_id);
